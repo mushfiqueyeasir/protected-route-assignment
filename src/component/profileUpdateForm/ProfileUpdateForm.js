@@ -9,8 +9,9 @@ import Loading from "../shared/loading/Loading";
 import { create } from "../../hooks/create";
 import { update } from "../../hooks/update";
 import ImageUploadInput from "../imageUploadInput/ImageUploadInput";
+import { Link } from "react-router-dom";
 
-const ProfileUpdateForm = () => {
+const ProfileUpdateForm = ({ skip }) => {
   const { user, userDatabase, userRefetch } = useContext(GLOBAL_CONTEXT);
   const [loading, setLoading] = useState(false);
   const [postLoading, setPostLoading] = useState(false);
@@ -119,7 +120,7 @@ const ProfileUpdateForm = () => {
               defaultValue={userDatabase?.address}
             />
           </div>
-          <div className="pt-6  flex justify-center">
+          <div className="pt-6  flex gap-x-2 justify-center">
             <button
               disabled={loading}
               type="submit"
@@ -127,6 +128,15 @@ const ProfileUpdateForm = () => {
             >
               submit
             </button>
+            {skip && (
+              <Link
+                to="/home"
+                type="button"
+                className={`btn glass  bg-[#4a685a] hover:bg-[#25362E]`}
+              >
+                Skip
+              </Link>
+            )}
           </div>
         </form>
       </div>

@@ -7,7 +7,7 @@ const AadharVerifiedAuth = ({ children }) => {
   const location = useLocation();
 
   if (userDatabase?.adharCard) {
-    return <Navigate to="/home" state={{ from: location }} replace></Navigate>;
+    return <Navigate to="/blogs" state={{ from: location }} replace></Navigate>;
   }
 
   return children;

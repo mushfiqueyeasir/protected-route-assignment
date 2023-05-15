@@ -3,6 +3,7 @@ import CustomInputField from "../../component/customInputField/CustomInputField"
 import { GLOBAL_CONTEXT } from "../../layouts/AppLayout";
 import { update } from "../../hooks/update";
 import AadharVerifiedAuth from "../../auth/AadharVerifiedAuth";
+import { Link } from "react-router-dom";
 
 const AadharVerificationPage = () => {
   const { userDatabase, userRefetch } = useContext(GLOBAL_CONTEXT);
@@ -49,10 +50,17 @@ const AadharVerificationPage = () => {
               max="14"
             />
           </div>
-          <div className="pt-6  flex justify-center">
+          <div className="pt-6  flex gap-x-2 justify-center">
             <button type="submit" className={`btn btn-outline`}>
               submit
             </button>
+            <Link
+              to="/home"
+              type="button"
+              className={`btn glass  bg-[#4a685a] hover:bg-[#25362E]`}
+            >
+              Skip
+            </Link>
           </div>
         </form>
       </section>
