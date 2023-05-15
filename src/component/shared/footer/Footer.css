@@ -1,0 +1,21 @@
+.wavy {
+    position: relative;
+    display: inline-block;
+    columns: #fff;
+    animation: animate 1.3s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-5px);
+    }
+
+    40%,
+    100% {
+        transform: translateZ(0px);
+    }
+}
