@@ -7,7 +7,7 @@ const ProfileUpdatedAuth = ({ children }) => {
   const location = useLocation();
 
   if (userDatabase?.name) {
-    return <Navigate to="/home" state={{ from: location }} replace></Navigate>;
+    return <Navigate to="/blogs" state={{ from: location }} replace></Navigate>;
   }
 
   return children;

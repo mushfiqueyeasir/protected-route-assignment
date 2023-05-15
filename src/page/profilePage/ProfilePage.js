@@ -7,7 +7,7 @@ const ProfilePage = () => {
   return (
     <RequireAuth>
       <ProfileUpdatedAuth>
-        <ProfileUpdateForm />
+        <ProfileUpdateForm skip={true} />
       </ProfileUpdatedAuth>
     </RequireAuth>
   );
